@@ -1,0 +1,52 @@
+/* Optional: Add CSS styling for the Reservation Page */
+
+.reservation-page {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.reservation-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-page div {
+    margin-bottom: 15px;
+}
+
+.reservation-page label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.reservation-page input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.reservation-page button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reservation-page button:hover {
+    background-color: #218838;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}

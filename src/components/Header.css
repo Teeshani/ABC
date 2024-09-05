@@ -1,0 +1,606 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 15px 30px;
+  background-color: #2f008b;
+  color: #fff;
+  position: relative;
+  z-index: 1000; 
+  
+}
+
+/* Overlay */
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); 
+z-index: 2000; /* Ensure the overlay is on top of other content */
+display: none; /* Initially hidden */
+}
+
+.top-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+}
+
+
+/* Logo Styles */
+
+.logo-container {
+display: flex;
+align-items: center;
+
+}
+
+.logoicon {
+width: 50px;
+height: auto; 
+margin-right: 10px; 
+padding-bottom: 10px;
+}
+
+#logo{
+font-size: 29px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight:bold;
+padding-bottom: 13px;
+
+}
+
+.greeting {
+position: relative;
+top: -8px;
+left: 8px;
+color: #319e4c; 
+}
+
+/* Navigation Styles */
+
+nav ul {
+display: flex;
+list-style: none;
+padding: 0;
+padding-left: 56px;
+
+}
+
+nav li {
+margin: 0 15px;
+
+
+}
+
+.bottom-section li{
+margin-right: 25px;
+
+}
+
+nav a {
+text-decoration: none;
+color: white;
+transition: color 0.3s;
+}
+
+nav a:hover {
+color: #319e4c; 
+}
+
+.login-icon {
+width: 31px;      
+height: auto;    
+right: 0px;
+position: relative;
+
+
+}
+
+.account-dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+right: 0;
+background-color: #2d2d2d;
+min-width: 150px;
+z-index: 1;
+border: none;
+border-radius: 15px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+color: white;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.account-dropdown:hover .dropdown-content {
+display: block;
+}
+
+
+
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  color: white;
+  background-color: #2d2d2d;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  display: none;
+  width: 450px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+  max-height: 400px;
+  overflow-y: auto;
+
+
+}
+
+.cart-item {
+display: flex;
+padding: 10px 0;
+
+  
+}
+
+.cart-item  .cart-item-image {
+  width: 90px;
+  height: auto;
+  margin-right: 20px;
+}
+
+
+.cart-buttons {
+  margin-top: 30px;
+  position: relative;
+  left: 100px;
+}
+
+.checkout-button,
+.clear-cart-button {
+  display: block;
+  justify-content: center;
+  width: 50%;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  margin: 0 auto;
+  border: 1px solid #696866;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover,
+.clear-cart-button:hover {
+  background-color: #504f4f;
+}
+
+.empty-cart {
+  padding: 10px;
+}
+
+.discount-message {
+  color: #dea514; /* Change color as desired */
+  
+  font-weight: bold; /* Make the text bold */
+  padding-left: 10px;
+}
+
+
+.cart-container:hover .cart-dropdown {
+  display: block;
+}
+
+.cart-buttons .sub{
+position: relative;
+right: 100px;
+color: white;
+font-weight:600;
+margin-bottom: 30px;
+}
+
+.hamburger {
+display: none;
+background-color: transparent;
+border: none;
+
+}
+
+.hamburger img{
+width: 32px;
+
+}
+
+.search-icon {
+display: inline-block;
+position: relative; 
+bottom: -4px;
+z-index: 3000;
+
+}
+
+.search-icon img {
+width: 24px;     
+height: auto; 
+cursor: pointer;
+}
+
+.wishlist-ico {
+display: inline-block;
+position: relative; 
+bottom: 0px;
+z-index: 1000;
+
+}
+
+.wishlist-ico  img {
+width: 32px;     
+height: auto; 
+cursor: pointer;
+z-index: 1000;
+}
+
+
+.gem-icon {
+display: inline-block;
+position: relative; 
+bottom:-3px;
+z-index: 1000;
+margin-right: -20px;
+
+}
+
+.gem-icon  img {
+width: 27px;     
+height: auto; 
+cursor: pointer;
+z-index: 1000;
+}
+
+/* CSS Styles for the gem count */
+.gem-count {
+  background-color: green; 
+  color: white; 
+  border-radius: 50%; 
+  padding: 5px 5px; 
+  font-size: 10px; 
+  position: relative; 
+  top: 3px; 
+  right: 0px; 
+  z-index: 1200;
+}
+
+
+.cart-icon {
+display: inline-block;
+position: relative; 
+
+}
+
+.cart-icon img {
+width: 30px;     
+height: auto; 
+cursor: pointer;
+}
+
+#cart-count {
+position: absolute;
+top: -8px; 
+right: -8px; 
+background-color: green;
+color: white;
+border-radius: 50%;
+padding: 4px 8px;
+font-size: 12px;
+}
+
+/* Style for the cart dropdown */
+
+.cart-dropdown-content {
+display: none;
+position: absolute;
+right: 0;
+background-color: rgba(52, 52, 52);
+border: 1px solid #ddd;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+width: 300px;
+margin-right: 20px;
+}
+
+
+.has-dropdown:hover .dropdown-menu {
+display: block;
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+
+top: 100%;
+left: 0;
+background-color: #2d2d2d;
+z-index: 1;
+width: 400px;
+border-radius: 0 0 5px 5px;
+padding: 10px 0;
+padding-right: 15px;
+height: 195px;
+}
+
+.dropdown-item {
+display: block;
+width: 100%;
+position: relative; /* Set the dropdown item to relative positioning */
+  
+}
+
+.dropdown-item.with-image .submenu {
+  position: absolute; /* Position the submenu absolutely */
+  top: 100%; /* Position the submenu below the dropdown item */
+  left: 0; /* Align the submenu with the left edge of the dropdown item */
+  display: none; /* Hide the submenu by default */
+}
+
+.dropdown-item a {
+padding: 10px 20px;
+display: block;
+color: #fff;
+
+
+
+}
+
+.dropdown-menu li {
+position: relative;
+list-style-type: none;
+}
+
+.custom-icon {
+float: left;
+margin-right: 20px;
+width: 150px;
+
+
+}
+
+.nav-item {
+position: relative;
+display: inline-block;
+margin-top: -12px;
+margin-bottom: -2px;
+}
+
+
+
+
+.submenu {
+display: none;
+margin-left: 2px;
+position: absolute;
+top: 0;
+left: 100%;
+background-color: #333;
+z-index: 1000;
+width: 200px;
+border-radius: 0 0 5px 5px;
+padding: 10px 0;
+}
+
+
+
+
+.category-image {
+width: 200px; 
+height: auto; /* Maintain aspect ratio */
+float: left; /* Float the image to the left */
+margin-right: 20px; 
+}
+
+.dropdown-item.with-image {
+position: relative; /* Position the dropdown item relative to its container */
+
+}
+
+.price-section{
+display: flex;
+padding: 0;
+}
+
+
+
+
+
+
+.category-items {
+display: flex;
+flex-wrap: wrap;
+padding-top: 10px;
+
+}
+.category {
+display: flex;
+align-items: center; /* Align items vertically */
+text-decoration: none; /* Remove default link underline */
+}
+
+.dropdown-item:hover .submenu {
+display: block;
+
+}
+
+/* Show submenu only when hovering over "Clothing" link */
+.dropdown-item.with-image:hover .dropdown-link + .submenu {
+display: block;
+}
+
+/* Style for the cart items list */
+
+#cart-items-list {
+list-style: none;
+display: block; 
+padding: 0;
+margin: 0;
+
+}
+
+#cart-items-list li {
+padding: 5px;
+border-bottom: 1px solid #ddd;
+font-size: 14px;
+}
+
+#cart-items-list li:last-child {
+border-bottom: none;
+}
+
+/* Additional styling for item name and price */
+
+#cart-items-list li span {
+display: block; 
+}
+
+#cart-items-list li span:first-child {
+font-weight: bold;
+color: white;
+}
+
+#cart-items-list li span:last-child {
+color: white;
+}
+
+/* Style for the "Go to Checkout" option */
+
+#cart-items-list a {
+display: block;
+text-decoration: none;
+padding: 5px;
+background-color: green; 
+color: white;
+text-align: center;
+font-weight: bold;
+border-radius: 5px;
+transition: background-color 0.3s;
+}
+
+#cart-items-list a:hover {
+background-color: #2980b9; 
+}
+
+
+
+/* Search bar container */
+#search-bar {
+position: absolute;
+top: 70px;
+right: 300px;
+padding: 10px;
+
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+z-index: 3000; 
+}
+
+/* Search input */
+#search-input {
+width: 300px;
+padding: 20px;
+border: 3px solid #696866;
+background-color: transparent;
+border-radius: 25px;
+margin-right: 10px;
+color: white;
+
+margin-bottom: 10px;
+
+
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+/* Search button */
+#search-button {
+padding: 6px 12px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+
+
+/* Individual search result item */
+.search-results div {
+padding: 5px 10px;
+cursor: pointer;
+background-color: #1e1e1e;
+color: white;
+}
+
+/* Hover effect for search result item */
+.search-results div:hover {
+color: green;
+}
+
+/* Scrollbar */
+.search-results::-webkit-scrollbar {
+width: 8px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+background-color: #888;
+border-radius: 4px;
+}
+
+.search-results::-webkit-scrollbar-track {
+background-color: #f4f4f4;
+}
+
+/* Title */
+.search-results div h2 {
+margin: 0 0 5px; /* Add some space below the title */
+font-size: 16px;
+font-family: 'Times New Roman', Times, serif;
+color: white;
+padding-top: 10px;
+margin-top: 10px;
+
+}
+
+.search-results div h2:hover{
+color: #319e4c;
+}
+
+/* Last product item in the list */
+.search-results div:last-child {
+margin-bottom: 10px; /* Remove border-bottom for the last item */
+}
+

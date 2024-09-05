@@ -1,0 +1,116 @@
+/* Testimonials Section Styles */
+
+#testimonials-section h2 {
+    font-size: 24px; 
+    color: white;
+    margin-bottom: 20px; 
+    font-weight: bold;
+    font-family:Luminari;
+  }
+  
+  #testimonials-carousel {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    color: white;
+    z-index: 500; 
+    
+  }
+  
+  .testimonials-slide {
+    display: none; /* Initially hide all slides */
+    padding: 20px;
+    margin-top: 25px;
+    background-color: transparent;
+    border: 3px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    transition: transform 0.3s; 
+  }
+  
+  .testimonials-slide:hover {
+    transform: translateY(-10px);  /* Lifts the card up a bit when hovered */
+  }
+  
+  
+  #testimonials-section {
+    text-align: center;
+    margin: 40px 0; 
+  }
+  
+  #testimonials {
+    padding: 50px 100px; 
+  }
+  
+  #prevTestimonial,
+  #nextTestimonial {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  #prevTestimonial {
+    left: 25px; 
+    background-color: transparent;
+  }
+  
+  #nextTestimonial {
+    right: 25px; 
+    background-color: transparent;
+  }
+
+  
+  #testimonials-section {
+  padding: 20px;
+  text-align: center;
+}
+
+#testimonials-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.testimonials-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.testimonials-slide p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.testimonials-slide h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+#prevTestimonial {
+  left: 10px;
+}
+
+#nextTestimonial {
+  right: 10px;
+}
+
+
+
+  
