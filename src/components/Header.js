@@ -136,7 +136,7 @@ const Header = () => {
           <nav>
             <ul>
               <li className="nav-item">
-                <Link to="/">Home</Link>
+                <Link to="/home">Home</Link>
               </li>
              
             <li class="nav-item has-dropdown">
@@ -145,8 +145,8 @@ const Header = () => {
             </li>
             
             <li class="nav-item has-dropdown">
-            <Link to="/overview">Menu</Link>
-                
+            <Link to="/gallery">Gallery</Link>
+           n     
             </li>
 
             <li class="nav-item has-dropdown">

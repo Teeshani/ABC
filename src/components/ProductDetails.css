@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e1e1e;
+    color: black;
 
 }
 
@@ -11,7 +11,7 @@ body {
     margin-top: 50px;
     padding: 0 20px;
     margin-left: 85px;
-    color: white;
+    color: black;
 }
 
 h2 {
@@ -26,7 +26,7 @@ h3{
 }
 
 .main-price{
-    color: #dea514;
+    color: green;
     font-weight:600;
 }
 
@@ -101,8 +101,8 @@ select, input[type="number"] {
     margin-bottom: 10px;
     margin-top: 10px;
     border: 1px solid #696866;
-    background-color: #333;
-    color: white;
+   
+    color: black;
     border-radius: 4px;
 }
 
@@ -113,8 +113,8 @@ select, input[type="number"] {
     margin-top: 10px;
     margin-right: 10px;
     border: 1px solid #696866;
-    background-color: #333;
-    color: white;
+    
+    color: black;
     border-radius: 4px;
 }
 

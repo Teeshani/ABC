@@ -25,11 +25,15 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Serve static files from the "public" directory
 app.use('/images', express.static('public/images'));
+app.use('/gallery', express.static('public/gallery'));
 
 
   // Import and use routes
 const carouselRoutes = require('./routes/CarouselRoutes'); // Ensure the correct path
 app.use('/api/carousels', carouselRoutes); // Mount the router at /api/carousels
+
+const galleryRoutes = require('./routes/galleryRoutes'); 
+app.use('/api/gallery', galleryRoutes); 
 
 
 app.use('/api', require('./routes/ProductRoutes'));
