@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+
+
+h1{
+ font-size: 28px;
+ font-family: 'Times New Roman', Times, serif;
+ font-weight:bold;
+}
+
+#titlename{
+    position: absolute;
+    bottom: 150px;
+    left: 75px;
+    font-size: 15px;
+
+}
+
+#quotes{
+    position: absolute;
+    bottom: 120px;
+    left: 75px;
+    font-size: 13px;
+    color: white;
+
+}
+
+
+.auth-section h2{
+    font-size: 18px;
+     font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-top: 15px;
+    text-align: center;
+    
+    
+   }
+
+p{
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 15px;
+    
+   }
+
+p{
+    font-size: 15px;
+    
+}  
+
+a{
+    font-size: 15px;
+    color: green;
+    text-decoration: none;
+    
+}  
+
+#subtopic{
+    position: absolute;
+    left: 225px;
+    font-size: 27px;
+    color: rgb(74, 74, 74);
+    padding-bottom: 300px;
+    
+    
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+ 
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px; 
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); 
+    transition: transform 0.3s ease; 
+}
+
+.left-image {
+    position: absolute;
+    left: 350px;
+    top: 175px;
+    padding-bottom: 20px;
+    width: 300px;
+   
+}
+
+
+
+span.error {
+    color: #D8000C;              
+    font-size: 0.85rem;          
+    display: block;              
+    margin-bottom: 10px;         
+    max-width: 90%;              
+    word-wrap: break-word;       
+}
+
+
+.auth-section {
+    position: absolute;
+    width: 400px; 
+    padding-right: 50px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    background-color: rgb(238, 238, 238);
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 110px;
+    margin-top: 120px;
+    right: 140px;
+   
+}
+
+
+.auth-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.auth-field input {
+    width: 97%;
+    height: 30px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #696866;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+}
+
+.btn-container {
+    text-align: center;
+    
+}
+
+.auth-b {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #989696;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-btn:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+
+

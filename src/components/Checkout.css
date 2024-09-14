@@ -1,0 +1,223 @@
+ /* Container styles */
+ .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 82px;
+    background-color: white;
+}
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+
+}
+
+
+
+/* Container styles for label and input field pair */
+.form-group {
+    margin-bottom: 20px;
+}
+
+   /* Flexbox styles for positioning last name input */
+   .name-fields {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: white;
+}
+
+.label-fields {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    width: 66%;
+
+}
+
+
+
+
+/* Checkout form styles */
+.checkout-form {
+    width: 85%;
+    
+    
+    background-color: white;
+   
+}
+
+.checkout-form #checkout-title {
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    
+    color: black;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 15px;
+    color: black;
+}
+.checkout-form input[type="text"],
+.checkout-form select
+ {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #696866;
+    border-radius: 5px;
+    color: black;
+    
+}
+
+.checkout-form input[type="text"]
+ {
+    width: 95%;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #696866;
+    border-radius: 5px;
+    color: black;
+    
+}
+
+
+.checkout-form input[type="email"],
+.checkout-form textarea
+{
+    width: 95%;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #696866;
+    border-radius: 5px;
+    color: black;
+}
+
+
+
+
+
+      /* Order Summary card styles */
+      .order-summary {
+    padding-bottom: 20px;
+   
+}
+.order-summary h2 {
+    font-size: 20px;
+   
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    color: black;
+}
+.order-summary ul {
+list-style: none;
+padding: 0;
+padding-top: 15px;
+margin: 0;
+color: black;
+}
+
+.order-summary ul li {
+display: flex; /* Use flexbox for layout */
+justify-content: space-between; /* Spread items horizontally */
+margin-bottom: 10px; /* Add bottom margin to create space between list items */
+margin-right: 12px;
+}
+
+.order-summary ul li .item-info {
+flex-grow: 1; /* Let the info span take remaining space */
+}
+
+.order-summary ul li .item-price {
+margin-left: 10px; /* Add left margin to separate price from item info */
+font-size: 15px;
+
+}
+
+
+.order-summary button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Payment method styles */
+.order-summary label {
+    display: block;
+    margin-bottom: 5px;
+    
+    
+}
+.order-summary input[type="radio"] {
+    margin-right: 10px;
+    color: black;
+}
+.order-summary input[type="radio"] + label {
+    font-weight: normal;
+    color: black;
+}
+.order-summary input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: black;
+}
+
+
+
+.left-contents{
+float: right;
+margin-right: 100px;
+margin-top: 57px;
+width: 30%;
+border: 1px solid #696866;
+border-radius: 5px;
+padding-top: 25px;
+padding-left: 25px;
+padding-right: 25px;
+padding-bottom: 75px;
+color: black;
+
+}
+
+.sub {
+margin: 0; /* Reset margin */
+padding: 0; /* Reset padding */
+padding-top: 15px;
+border-top: 1px solid #696866;
+}
+
+.price {
+float: right; /* Move the price to the right */
+margin: 0; /* Reset margin */
+padding: 0;
+margin-right: 12px;
+font-size: 0.905rem;
+
+}
+
+button[name='place_order']{
+display: block;
+margin: 30px auto;
+width: 40%;
+padding: 15px;
+background-color: green;
+color: #fff;
+border: 1px solid #696866;
+border-radius: 4px;
+margin-bottom: 15px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button[name='place_order']:hover {
+background-color: #005f1c;
+}
+

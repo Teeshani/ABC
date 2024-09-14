@@ -10,5 +10,5 @@ const carouselSchema = new mongoose.Schema({
   button_text: String,
 });
 
-module.exports = mongoose.model('Carousel', carouselSchema);
+module.exports = mongoose.model('Carouselitems', carouselSchema);
 

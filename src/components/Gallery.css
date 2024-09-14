@@ -1,9 +1,13 @@
 /* Menu Section Styles*/
 
+.mainmenu-items{
+   background-color: white;
+}
+
 .intro-c h2{
-    font-size: 34px;
+    font-size: 29px;
     color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
     text-align: left;
    }
 
@@ -49,15 +53,15 @@
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px; 
-    background-color: rgb(52, 52, 52);;
-    color: #fff;
+    background-color: green;
+    color: #006519;
     text-decoration: none;
     border-radius: 5px; 
-    transition: background-color 0.3s; 
+    
    }
   
    .view-btn:hover {
-    background-color: #555; 
+    background-color: #016e1a; 
    }
   
    .gallery {
@@ -70,6 +74,7 @@
   
    .gallery h2{
     font-family: 'Times New Roman', Times, serif;
+    font-size: 23px;
     font-weight:bold;
     color: black;
     border-bottom: 1px solid #989696;
@@ -108,7 +113,7 @@
   
    #first{
     font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+   
     font-weight:bold;
     color: black;
     border: solid 2px grey;
@@ -121,7 +126,7 @@
   
    #second{
     font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
     font-weight:bold;
     color: black;
     padding-top: 25px;

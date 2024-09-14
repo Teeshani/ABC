@@ -1,5 +1,3 @@
-// src/services/api.js
-
 const API_URL = 'http://localhost:5000/api';
 
 // Function to make a reservation
@@ -70,32 +68,107 @@ export const getPopularProducts = async () => {
     }
 };
 
-
-
 // Function to fetch a product by ID
 export const getProductById = async (id) => {
     try {
-      const response = await fetch(`${API_URL}/products/${id}`);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return await response.json();
+        const response = await fetch(`${API_URL}/products/${id}`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return await response.json();
     } catch (error) {
-      console.error('There was a problem with the fetch operation:', error);
-      throw error; // Propagate the error
+        console.error('There was a problem with the fetch operation:', error);
+        throw error; // Propagate the error
     }
-  };
+};
 
-  export const getSimilarProducts = async (id) => {
+
+
+// Function to add an item to the cart
+export const addToCart = async (cartItem) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/products/similar/${id}`);
+        const response = await fetch(`${API_URL}/cart`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(cartItem),
+        });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+        throw error; // Propagate the error
+    }
+};
+
+// Function to fetch all cart items
+export const getCartItems = async () => {
+    try {
+        const response = await fetch(`${API_URL}/cart`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+        throw error; // Propagate the error
+    }
+};
+
+// Function to clear the cart
+export const clearCart = async () => {
+    try {
+        const response = await fetch(`${API_URL}/cart/clear`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+        throw error; // Propagate the error
+    }
+};
+
+// Function to handle user signup
+export const signupUser = async (formData) => {
+    try {
+        const response = await fetch(`${API_URL}/signup`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+        throw error; // Propagate the error
+    }
+};
+
+// src/services/api.js
+export const getSimilarProducts = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:5000/api/similar/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch similar products');
       }
-      return await response.json();
+      const data = await response.json();
+      return data;
     } catch (error) {
       console.error('Error fetching similar products:', error);
       throw error;
     }
   };
-
+  

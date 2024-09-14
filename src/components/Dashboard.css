@@ -1,0 +1,154 @@
+#dashboard {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 20px;   
+ }
+
+ .dashboard-card {
+    width: 200px;
+    background-color: rgba(52, 52, 52, 0.466);
+    border: 1px solid grey;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;   
+ }
+
+ .dashboard-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+ }
+
+ /* Style the query list container */
+ #query-list-container h2, #online-order-list-container h2 {
+ padding-top: 20px;
+ font-size: 20px;
+ border: 1px solid gray;
+ border-left: none;
+ border-right: none;
+ border-bottom: none;
+ }
+
+ #reservation-list-container h2{
+ padding-top: 20px;
+ font-size: 20px;
+ border: 1px solid gray;
+ border-left: none;
+ border-right: none;
+ border-bottom: none;
+ }
+
+ #query-list-container, #reservation-list-container, #online-order-list-container{
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+ }
+
+
+ #reservation-list-container form, #online-order-list-container form {
+    display: flex;    
+ }
+
+ #query-list-container form {
+    display: flex;
+   
+ }
+
+ #reservation-list-container select, #online-order-list-container select  {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #393b39;
+    color: white;
+ }
+
+ /* Style the select dropdown */
+ #query-list-container select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #393b39;
+    color: white;
+ }
+
+ /* Style the update button */
+ #reservation-list-container button, #online-order-list-container button {
+    padding: 3px 12px;
+    background-color: #39506e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+
+ #query-list-container button {
+    padding: 3px 12px;
+    background-color: #39506e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+
+ /* Style the update button on hover */
+ #reservation-list-container button:hover {
+    background-color: #2977ac;
+ }
+
+ #query-list-container button:hover {
+    background-color: #2977ac;
+ }
+
+
+ #Querytable{
+    width: 100%;
+    border-collapse: collapse;
+     
+ }
+
+ table {
+    width: 100%;
+    border-collapse: collapse;   
+ }
+
+ table th, td {
+    border: 1px solid #000; 
+    padding: 8px;
+    text-align: left;
+ }
+
+ /* Style table header */
+ thead {
+    background-color: #39506e;
+    color: #fff;
+ }
+
+ thead th {
+    padding: 10px;
+ }
+
+ /* Style table rows */
+ tbody tr:nth-child(odd) {
+    background-color: #353836;
+    color: white;
+ }
+
+ tbody tr:nth-child(even) {
+    background-color: #575957;
+    color: white;
+ }
+
+ tbody td {
+    padding: 10px;
+ }
+
+ /* Add hover effect to table rows */
+ tbody tr:hover {
+    background-color: green;
+    cursor: pointer;
+ }

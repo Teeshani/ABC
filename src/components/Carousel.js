@@ -1,11 +1,13 @@
 // src/components/Carousel.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Carousel.css'; // Ensure you have styling for the carousel
 
 const Carousel = () => {
   const [carouselItems, setCarouselItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const prevBtnRef = useRef(null);
+  const nextBtnRef = useRef(null);
 
   useEffect(() => {
     const fetchCarouselItems = async () => {
@@ -32,7 +34,6 @@ const Carousel = () => {
   useEffect(() => {
     if (!carouselItems.length) return;
 
-    // Main Carousel Function
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
 
@@ -42,15 +43,20 @@ const Carousel = () => {
       slides[currentSlide].style.opacity = '1';
     }
 
-    document.getElementById('prevBtn').addEventListener('click', () => {
+    const handlePrevClick = () => {
       showSlide(currentSlide - 1);
       resetSlideInterval();
-    });
+    };
 
-    document.getElementById('nextBtn').addEventListener('click', () => {
+    const handleNextClick = () => {
       showSlide(currentSlide + 1);
       resetSlideInterval();
-    });
+    };
+
+    if (prevBtnRef.current && nextBtnRef.current) {
+      prevBtnRef.current.addEventListener('click', handlePrevClick);
+      nextBtnRef.current.addEventListener('click', handleNextClick);
+    }
 
     setTimeout(() => showSlide(0), 50);
 
@@ -67,8 +73,8 @@ const Carousel = () => {
 
     // Cleanup function to remove event listeners and interval
     return () => {
-      document.getElementById('prevBtn').removeEventListener('click', showSlide);
-      document.getElementById('nextBtn').removeEventListener('click', showSlide);
+      if (prevBtnRef.current) prevBtnRef.current.removeEventListener('click', handlePrevClick);
+      if (nextBtnRef.current) nextBtnRef.current.removeEventListener('click', handleNextClick);
       clearInterval(slideInterval);
     };
   }, [carouselItems]);
@@ -89,8 +95,8 @@ const Carousel = () => {
             </div>
           </div>
         ))}
-        <button id="prevBtn">&#10094;</button>
-        <button id="nextBtn">&#10095;</button>
+        <button ref={prevBtnRef} id="prevBtn">&#10094;</button>
+        <button ref={nextBtnRef} id="nextBtn">&#10095;</button>
       </div>
     </section>
   );

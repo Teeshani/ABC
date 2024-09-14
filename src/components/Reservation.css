@@ -1,0 +1,126 @@
+
+.reservation-main{
+   background-color: white;
+   color: black;
+}
+
+#reservation-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 10%;
+   
+  }
+
+  .reservation-form {
+    flex: 1; 
+    padding: 20px;
+    border: 1px solid #696866;
+    margin: 20px;
+    color: black;
+    border-radius: 10px;
+  }
+
+  .reservation-form h2 {
+   font-size: 1.4em;
+   color: black;
+   
+  
+   
+ }
+
+ .creative-content{
+  flex: 1; 
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+
+ 
+  margin: 18px;
+  color: black;
+  border-radius: 10px;
+ }
+
+ .creative-content img{
+  width: 700px;
+  position: relative;
+  right: 50px;
+ }
+
+ .creative-content {
+    text-align: center;
+ }
+
+ .creative-content h3 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: black;
+ }
+
+ .creative-content p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: black;
+ }
+
+ .creative-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+   
+ }
+
+  
+
+ .form-field {
+    margin-bottom: 20px;
+    margin-right: 15px;
+ }
+
+ label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+    margin: 10px 0;
+    color: black;
+ }
+
+ .btn-container {
+    text-align: center;
+ }
+
+ .reserve-btn {
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+ }
+
+ .reservation-form h2{
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  text-decoration: underline;
+  color: black;
+ }
+
+ .reserve-btn:hover {
+    background-color: #00611d;
+ }
+
+ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="time"], input[type="number"] {
+   width: 97%;
+    height: 30px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #696866;
+    border-radius: 5px;
+    color: black;
+    background-color: transparent;
+ }
+
+ #onlinelabel{
+  color: #32ad47;
+  cursor: pointer;
+ }

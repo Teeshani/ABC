@@ -36,8 +36,8 @@ const NewArrivals = () => {
   }
 
   return (
-    <div className="container">
-      <h2 id="main-title">Popular Dishes</h2>
+    <div className="container-Dishes">
+      <h2 id="main-title">Popular Items</h2>
       <div className="product-grid">
         {products.length > 0 ? (
           products.map((product) => (
@@ -50,14 +50,8 @@ const NewArrivals = () => {
                 <h3>{product.title}</h3>
                 <p>LKR {product.price.toFixed(2)}</p>
               </a>
-              {/* Replace with your actual image path */}
-<a href="#" className="wishlist-icon">
-  <img 
-    src={loveImage} 
-    alt="Add to Wishlist" 
-    className="wishlist-image" 
-  />
-</a>
+              
+
 
             </div>
           ))
@@ -66,8 +60,8 @@ const NewArrivals = () => {
         )}
       </div>
       
-      <div className="view-all-btn-container">
-        <a href="/newarrivals" className="view-all-btn">View</a>
+      <div className="view-container">
+        <a href="/menu" className="Dishes-button">View Collection</a>
       </div>
 
     </div>

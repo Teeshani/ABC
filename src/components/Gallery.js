@@ -1,7 +1,9 @@
 // frontend/src/components/Gallery.js
 import React, { useEffect, useState } from 'react';
 import './Gallery.css'; 
+import dish1Image from '../assets/images/grid1.jpg';
 
+import dish4Image from '../assets/images/grid4.jpg';
 
 
 const Gallery = () => {
@@ -12,7 +14,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchGallery = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/gallery'); 
+        const response = await fetch('http://localhost:5000/api/gallery'); // Ensure the backend endpoint is correct
         const data = await response.json();
         setGalleryData(data);
         setLoading(false);
@@ -29,22 +31,28 @@ const Gallery = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
+    <div className='mainmenu-items'>
       {/* Menu Introduction Section */}
       <section className="menu-in">
         <div className="intro-c">
-          <h2> Gallery</h2>
+          <h2>Discover Our Gallery</h2>
           <p>
-          This showcases visual content such as photos and videos that highlight a restaurant's ambiance, 
-          dishes, drinks, events, and special features. The gallery typically includes high-quality images 
-          of the interior and exterior design, popular menu items, and any unique elements like chef specials
-          or seasonal themes. This section is essential for providing potential customers a virtual glimpse 
-          into the dining experience, creating an inviting atmosphere, and encouraging them to visit or place
-          an order online. 
+            Welcome to a visual feast that celebrates the artistry and flavor of
+            our Signature Cuisine. Our culinary team takes pride in crafting
+            dishes that not only tantalize the taste buds but also captivate the
+            eyes. Each creation is a masterpiece, a symphony of colors, textures,
+            and exquisite flavors meticulously curated to elevate your dining
+            experience. Explore the gallery and savor the visual allure of our
+            culinary craftsmanship.
           </p>
         </div>
 
-      
+        {/* Static images */}
+        <div className="images-g">
+        <img src={dish1Image} alt="Dish 1" />
+        
+          <img src={dish4Image} alt="Dish 4" />
+        </div>
       </section>
 
       {/* Gallery Main Section */}

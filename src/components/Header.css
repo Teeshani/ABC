@@ -3,12 +3,14 @@ header {
   justify-content: space-between;
   flex-direction: column;
   padding: 15px 30px;
-  background-color: #2f008b;
-  color: #fff;
+  background-color: #f8f8f8;
+  color: black;
   position: relative;
   z-index: 1000; 
   
 }
+
+
 
 /* Overlay */
 #overlay {
@@ -17,9 +19,9 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(0, 0, 0, 0.5); 
-z-index: 2000; /* Ensure the overlay is on top of other content */
-display: none; /* Initially hidden */
+background-color: white; 
+z-index: 2000; 
+display: none; 
 }
 
 .top-row {
@@ -53,12 +55,6 @@ padding-bottom: 13px;
 
 }
 
-.greeting {
-position: relative;
-top: -8px;
-left: 8px;
-color: #319e4c; 
-}
 
 /* Navigation Styles */
 
@@ -66,7 +62,7 @@ nav ul {
 display: flex;
 list-style: none;
 padding: 0;
-padding-left: 56px;
+
 
 }
 
@@ -83,12 +79,14 @@ margin-right: 25px;
 
 nav a {
 text-decoration: none;
-color: white;
+color: black;
 transition: color 0.3s;
+font-family: 'Times New Roman', Times, serif;
+font-size: 16px;
 }
 
 nav a:hover {
-color: #319e4c; 
+color: #1008f3; 
 }
 
 .login-icon {
@@ -99,6 +97,9 @@ position: relative;
 
 
 }
+
+
+
 
 .account-dropdown {
 position: relative;
@@ -143,14 +144,14 @@ display: block;
   position: absolute;
   top: 100%;
   right: 0;
-  color: white;
-  background-color: #2d2d2d;
+  color: black;
+  background-color: rgb(235, 235, 235);
   border: none;
   border-radius: 5px;
   padding: 15px;
   display: none;
   width: 450px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .cart-items {
@@ -174,43 +175,49 @@ padding: 10px 0;
 }
 
 
-.cart-buttons {
+.cart-butt {
   margin-top: 30px;
   position: relative;
-  left: 100px;
+  
 }
 
-.checkout-button,
-.clear-cart-button {
+.checkout-butt,
+.clear-cart-butt {
   display: block;
   justify-content: center;
+  font-size: 14px;
   width: 50%;
   padding: 15px;
-  background-color: #333;
-  color: white;
+  background-color: green;
+  color: black;
   margin: 0 auto;
   border: 1px solid #696866;
   border-radius: 4px;
   margin-bottom: 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+
+}
+
+.sub{
+  border-top: 1px solid #696866;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 400;
+  
 }
 
 .checkout-button:hover,
 .clear-cart-button:hover {
-  background-color: #504f4f;
+  background-color: #036c34;
 }
 
 .empty-cart {
   padding: 10px;
 }
 
-.discount-message {
-  color: #dea514; /* Change color as desired */
-  
-  font-weight: bold; /* Make the text bold */
-  padding-left: 10px;
-}
 
 
 .cart-container:hover .cart-dropdown {
@@ -472,7 +479,7 @@ margin: 0;
 
 #cart-items-list li {
 padding: 5px;
-border-bottom: 1px solid #ddd;
+border-bottom: 1px solid #ab1111;
 font-size: 14px;
 }
 

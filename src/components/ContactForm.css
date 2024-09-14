@@ -1,0 +1,137 @@
+main {
+    
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+ }
+
+ /* Contact information and form styles */
+ .contact-info {
+    margin-bottom: 20px;
+ }
+
+ .contact-container {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .restaurant-image {
+    flex: 1; 
+    max-width: 500px;
+    margin-right: 20px;
+    margin-left: 110px;
+ }
+
+ .contact-form {
+    flex: 1; 
+    max-width: 550px;
+    margin-right: 110px;
+    color: black;
+ }
+
+ .contact-info h2 {
+    font-size: 1.5rem;
+    color: black;
+ }
+
+ .contact-info ul {
+    list-style: none;
+    padding-left: 0;
+ }
+
+ .contact-info li {
+    margin-bottom: 10px;
+ }
+
+ .contact-form {
+    background-color: transparent;
+    border: 1px solid #696866;
+    padding: 20px;
+    border-radius: 5px;   
+
+ }
+
+ .contact-form h2 {
+    font-size: 1.5rem;
+    color: black;
+ }
+
+ .contact-form p {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    color: black;
+ }
+
+ .contact-form label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px 0;
+    color: black;
+ }
+
+
+ .contact-form textarea {
+    width: 97%;
+    height: 100px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #696866;
+    border-radius: 5px;
+    color: black;
+    background-color: transparent;
+ }
+
+ .contact-form input[type="text"],
+ .contact-form input[type="email"] {
+    width: 97%;
+    height: 30px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #696866;
+    border-radius: 5px;
+    color: black;
+    background-color: transparent;
+    
+ }
+
+ input:focus { 
+   outline: none !important;
+   
+}
+
+textarea:focus{
+   outline: none !important;
+ 
+
+}
+
+
+
+ .contact-form textarea {
+    padding-top: 10px;
+ }
+
+ .contact-form textarea {
+    resize: none;
+ }
+
+ .contact-form button {
+   background-color: green;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+ }
+
+ .contact-form button:hover {
+   background-color: #00722e;
+ }
+  
+ /*Contact Form And Other Details */

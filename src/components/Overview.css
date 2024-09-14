@@ -1,3 +1,7 @@
+.main-overview{
+  background-color: white;
+}
+
 .overview-section {
     display: flex;
     align-items: center;
@@ -5,13 +9,8 @@
     padding: 50px;
     padding-left: 85px;
     padding-right: 110px;
+    color: black;
     background-color: white;
-    
- }
-
- .main-cont{
-  background-color: white;
-  color: black;
  }
 
  .overview-text {
@@ -20,20 +19,21 @@
  }
 
  .overview-text h1 {
-    font-size: 34px;
+    font-size: 29px;
     margin-bottom: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight:bold;
     color: black;
  }
 
  .overview-text p {
    text-align: justify;
-    font-size: 18px;
+    font-size: 17px;
     width: 95%;
     margin-bottom: 20px;
     padding-right: 15px;
     color: black;
+     color: black;
  }
 
   .overview-images {
@@ -64,7 +64,7 @@
 
   .explore-section {
     margin: 40px 0;
-    background-color: white;
+    
     
   }
 
@@ -75,6 +75,8 @@
     margin-bottom: 125px;
     padding-left: 110px;
     padding-right: 90px;
+    background-color: white;
+   
   }
 
   .explore-text p {
@@ -82,12 +84,12 @@
     margin-bottom: 20px;
     text-align: justify;
     color: black;
-
  }
 
  .explore-textsecond h3{
-  color: black;
+  
   padding-left: 62px;
+  color: black;
 
 }
 
@@ -96,6 +98,7 @@
     padding-left: 62px;
     text-align: justify;
     color: black;
+
 
  }
 
@@ -115,14 +118,9 @@
     border-radius: 15px;  
   }
 
-  .explore-text3 h3{
-  
-    color: black;
-  
-  }
 
   .explore-image3 {
-    width: 30%;
+    width: 70%;
     height: auto;
     padding-right: 10px;
     border-radius: 15px;  
@@ -152,7 +150,7 @@
   }
 
   .explore-text h3{
-   font-size: 27px;
+   font-size: 25px;
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-weight:bold;
    color: black;
@@ -161,14 +159,14 @@
   
 
   .explore-textsecond h3{
-   font-size: 27px;
+   font-size: 25px;
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-weight:bold;
    color: black;
   }
 
   .explore-text3 h3{
-    font-size: 27px;
+    font-size: 23px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight:bold;
     color: black;
@@ -209,84 +207,3 @@
     padding-left: 50px;
   }
 
-  .menu-intro {
-  display: flex;
- 
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 0;
-  margin-left: 115px;
-  margin-right: 115px;
-  color: white;
-  border: 1px solid #989696;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
- }
-
- .intro-cont {
-  flex: 1; /* This takes up half the space */
-  padding-right: 20px; 
- 
-  
-  
- }
-
- .intro-cont p {
-    font-size: 17px;
-   width: 750px;
-   }
-  
-
- 
-
- .images-grid img {
-  width: 450px;
-  
-  height: auto;
-  object-fit: cover;
- }
-
- .view-btn {
-  display: inline-block;
-  padding: 15px 20px;
-  margin-top: 20px; 
-  background-color: rgb(52, 52, 52);;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px; 
-  transition: background-color 0.3s; 
- }
-
- .view-btn:hover {
-  background-color: #555; 
- }
-
- .view-all-btn-container {
-  text-align: center;
- }
-
- .view-all-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-bottom: 25px;
-  background-color: rgb(52, 52, 52);;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
- }
-
- .intro-cont h2{
-  font-size: 30px;
-  text-align: left;
-  color: white; 
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
- }
-
-
- .view-all-btn:hover {
-  background-color: #555; 
- }

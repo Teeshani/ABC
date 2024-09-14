@@ -3,11 +3,10 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  
-    
-
+  background-color: white;
 }
 
 .App {
   text-align: center;
+  background-color: white;
 }

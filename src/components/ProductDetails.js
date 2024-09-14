@@ -1,23 +1,26 @@
-// src/pages/ProductDetails.js
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetails.css';
-import { getProductById, getSimilarProducts } from '../services/api'; // Import API functions
+import { getProductById, getSimilarProducts } from '../services/api';
+import { useCart } from '../context/CartContext'; // Import the useCart hook
+import { useUser } from '../context/UserContext'; // Assuming you have a UserContext for managing user data
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDetails = () => {
-  const { id } = useParams(); // `id` is the MongoDB `_id` passed from the URL
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [similarProducts, setSimilarProducts] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart(); // Destructure the addToCart function from context
+  const { user } = useUser(); // Get the user object from the UserContext
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        // Fetch product details
         const productData = await getProductById(id);
         setProduct(productData);
 
-        // Fetch similar products
         const similarData = await getSimilarProducts(id);
         setSimilarProducts(similarData);
       } catch (error) {
@@ -34,21 +37,49 @@ const ProductDetails = () => {
 
   const handleAddToCart = (e) => {
     e.preventDefault();
-    // Implement add to cart functionality
+
     const cartItem = {
       productId: product._id,
-      title: product.title,
+      product_name: product.title,
       price: product.price,
       quantity: parseInt(quantity, 10),
-      image_path: product.image_path,
+      main_image: product.image_path,
+      size: 'Default Size', // Set this based on your product details or user selection
     };
-    // Add to cart logic (this could be a function that updates your cart state or API call)
-    console.log('Adding to cart:', cartItem);
-    // Example: addToCart(cartItem); // Define addToCart elsewhere to handle cart operations
+
+    if (user && user.isLoggedIn) {
+      addToCart(cartItem, user.id);
+    } else {
+      const existingCart = JSON.parse(sessionStorage.getItem('guestCart')) || [];
+      const existingItemIndex = existingCart.findIndex(item => item.productId === cartItem.productId);
+
+      let updatedCart;
+
+      if (existingItemIndex !== -1) {
+        // Item exists, update quantity
+        updatedCart = existingCart.map((item, index) =>
+          index === existingItemIndex
+            ? { ...item, quantity: item.quantity + cartItem.quantity }
+            : item
+        );
+      } else {
+        // Item does not exist, add new item
+        updatedCart = [...existingCart, cartItem];
+      }
+
+      // Update session storage
+      sessionStorage.setItem('guestCart', JSON.stringify(updatedCart));
+    }
+
+    toast.success('Item added to cart!', {
+      autoClose: 750, // Duration in milliseconds (3 seconds)
+      onClose: () => window.location.reload() // Reload the page when the toast closes
+    });
   };
 
   return (
-    <div className="container">
+    <div className="container-products">
+      <ToastContainer />
       <div className="product-details">
         <div className="product-images">
           <div className="main-image">
@@ -62,10 +93,12 @@ const ProductDetails = () => {
         <div className="product-info">
           <h3>{product.title}</h3>
           <p className="main-price">LKR {product.price.toFixed(2)}</p>
-          <p><strong>Description:</strong> </p>
+          <p><strong>Description:</strong></p>
           <p>{product.description}</p>
           <form onSubmit={handleAddToCart}>
-            <label id="quantity-label" htmlFor="quantity"><strong>Quantity:</strong></label>
+            <label id="quantity-label" htmlFor="quantity">
+              <strong>Quantity:</strong>
+            </label>
             <input
               type="number"
               name="quantity"
@@ -81,28 +114,10 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {similarProducts.length > 0 && (
-        <div>
-          <h2 id="similar">Similar Products</h2>
-          <div className="similar-products">
-            {similarProducts.map((similarProduct) => (
-              <div className="product-card" key={similarProduct._id}>
-                <a href={`/product/${similarProduct._id}`}>
-                  <img
-                    src={`http://localhost:5000/images/${similarProduct.image_path}`}
-                    alt={similarProduct.title}
-                  />
-                  <h3 id="pro-title">{similarProduct.title}</h3>
-                  <p id="pro-phar">LKR {similarProduct.price.toFixed(2)}</p>
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      
+      
     </div>
   );
 };
 
 export default ProductDetails;
-

@@ -1,38 +1,54 @@
-// backend/models/Reservation.js
-
 const mongoose = require('mongoose');
+const AutoIncrement = require('mongoose-sequence')(mongoose);
 
-const reservationSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    phone: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: Date,
-        required: true
-    },
-    time: {
-        type: String,
-        required: true
-    },
-    guests: {
-        type: Number,
-        required: true
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }
+// Define the Reservation schema
+const ReservationSchema = new mongoose.Schema({
+  reservationId: { 
+    type: Number, 
+    unique: true 
+  },
+  userId: { 
+    type: String, 
+    required: true 
+  },
+  name: { 
+    type: String, 
+    required: true 
+  },
+  email: { 
+    type: String, 
+    required: true 
+  },
+  phone: { 
+    type: String, 
+    required: true 
+  },
+  date: { 
+    type: Date, 
+    required: true 
+  },
+  time: { 
+    type: String, 
+    required: true 
+  },
+  seats: { 
+    type: Number, 
+    required: true 
+  },
+  paymentSlip: { 
+    type: String, 
+    required: true 
+  }, // Path to the uploaded file
+
+  status: {
+    type: String,
+    default: 'pending',
+  },
+
 });
 
-const Reservation = mongoose.model('Reservation', reservationSchema);
+// Apply the auto-increment plugin to the schema
+ReservationSchema.plugin(AutoIncrement, { inc_field: 'reservationId' });
 
-module.exports = Reservation;
+// Create the model
+module.exports = mongoose.model('Reservation', ReservationSchema);

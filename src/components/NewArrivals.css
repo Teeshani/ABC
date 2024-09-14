@@ -1,16 +1,20 @@
 #main-title {
     font-family:'Times New Roman', Times, serif;
-    font-size: 26px;
-    color: black;
+    font-size: 23px;
     margin: 0 auto;
     text-align: center;
     width: 100%;
     display: block;
-    padding-top: 20px;
+    padding-top: 75px;
     margin-bottom: 50px;
     padding-bottom: 20px;
     border-bottom: 1px solid #696866;
-   
+    color: black;
+}
+
+.container-Dishes{
+ margin-right: 80px;
+ margin-left: 105px;
 }
 
 
@@ -18,7 +22,7 @@
   .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 15px;
 }
 
 .product-card {
@@ -27,11 +31,10 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 330px;
+    width: 300px;
     transition: transform 0.3s ease;
-    background-color: #d8d4d9;
-    
-    margin-left: 50px;
+    background-color: rgb(236, 236, 236);
+    margin-left: 35px;
     margin-bottom: 30px;
 }
 
@@ -57,36 +60,37 @@
     margin-top: 10px;
     font-size: 18px;
     color: black;
+    
 }
 
 .product-card p {
     font-weight: bold;
-    color: black;
+        color: black;
 }
 
 
-.view-all-btn-container {
+.view-container {
     text-align: center;
+    
   }
   
-  .view-all-btn {
+  .Dishes-button {
     display: inline-block;
     padding: 20px;
-    
     width: 250px;
     margin-bottom: 25px;
     margin-top: 20px;
-    background-color: green;
+    background-color: rgb(52, 52, 52);;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-   
+    transition: background-color 0.3s ease;
   }
   
-  .view-all-btn:hover {
-    
+  .Dishes-button:hover {
+    background-color: #504f4f; 
   }
 
   
